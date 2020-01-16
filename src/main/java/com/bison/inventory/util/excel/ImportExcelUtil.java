@@ -4,11 +4,16 @@ package com.bison.inventory.util.excel;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Map.Entry;
 
+import com.bison.inventory.constant.ShenZhenLocalInventoryCertificateType;
+import com.bison.inventory.constant.ShenZhenLocalInventoryOutInBoundType;
+import com.bison.inventory.pojo.Product;
 import com.bison.inventory.pojo.ShenZhenLocalOutInBoundInventroy;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.ss.usermodel.*;
@@ -307,69 +312,42 @@ public class ImportExcelUtil {
 
 
     //测试
-    @Test
-    public  void test ()throws Exception {
+//    @Test
+//    public  void test ()throws Exception {
+//
+//
+//
+//        Long time=System.currentTimeMillis();
+//        ImportExcelUtil example = new ImportExcelUtil();
+//
+////        example.processOneSheet("/home/leaderment/桌面/inventory/深圳仓库出入库明细录入表格01月11日.xlsx");
+//        example.processOneSheet("c:/Users/31719/Desktop/深圳仓库出入库明细录入表格01月14日.xlsx");
+//        Long endtime=System.currentTimeMillis();
+//        LinkedHashMap<String, String>  map=example.getRowContents();
+//        Iterator<Entry<String, String>> it= map.entrySet().iterator();
+//        int count=0;
+//        String prePos="";
+//        while (it.hasNext()){
+//            Map.Entry<String, String> entry=(Map.Entry<String, String>)it.next();
+//            String pos=entry.getKey();
+//            if(!pos.substring(1).equals(prePos)){
+//                prePos=pos.substring(1);
+//                count++;
+//            }
+//            System.out.println(pos+";"+entry.getValue());
+//
+//            boolean flag = saveDB(pos,entry.getValue());
+//
+//            if(flag){
+//                break;
+//            }
+//        }
+//        System.out.println("解析数据"+count+"条;耗时"+(endtime-time)/1000+"秒");
+//    }
 
 
 
-        Long time=System.currentTimeMillis();
-        ImportExcelUtil example = new ImportExcelUtil();
-
-        example.processOneSheet("/home/leaderment/桌面/inventory/深圳仓库出入库明细录入表格01月11日.xlsx");
-        Long endtime=System.currentTimeMillis();
-        LinkedHashMap<String, String>  map=example.getRowContents();
-        Iterator<Entry<String, String>> it= map.entrySet().iterator();
-        int count=0;
-        String prePos="";
-        while (it.hasNext()){
-            Map.Entry<String, String> entry=(Map.Entry<String, String>)it.next();
-            String pos=entry.getKey();
-            if(!pos.substring(1).equals(prePos)){
-                prePos=pos.substring(1);
-                count++;
-            }
-            System.out.println(pos+";"+entry.getValue());
-
-            boolean flag = saveDB(pos,entry.getValue());
-
-            if(flag){
-                break;
-            }
-        }
-        System.out.println("解析数据"+count+"条;耗时"+(endtime-time)/1000+"秒");
-    }
-
-    private boolean saveDB(String pos, String value) {
-
-        /**
-         * 一般为 A B C D E F G H 等
-         */
-        String col = pos.substring(0,1);
 
 
-        ShenZhenLocalOutInBoundInventroy shenZhenLocalOutInBoundInventroy = new ShenZhenLocalOutInBoundInventroy();
-
-        switch (col){
-            case "A" :
-
-                Date date = new Date(Long.parseLong(value));
-                System.out.println("date = " + date);
-
-            break;
-        }
-
-
-
-        int row = Integer.parseInt(pos.substring(1,pos.length()));
-
-        //判断是否结束
-        String endStr = "#N/A";
-        if(endStr.equalsIgnoreCase(value)){
-            return true;
-        }
-
-
-        return false;
-    }
 
 }

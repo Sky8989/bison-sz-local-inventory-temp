@@ -5,9 +5,10 @@ package com.bison.inventory.util.excel;
 /**
  SheetHandler  类中处理从excle获取的数据，官方文档中 SheetHandler以内部类形式，为保证更新代码减少内部类class文件忘记打包，改为一般java类
  */
-import java.util.LinkedHashMap;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.model.SharedStringsTable;
         import org.apache.poi.xssf.usermodel.XSSFRichTextString;
         import org.xml.sax.Attributes;
@@ -95,66 +96,101 @@ public class SheetHandler  extends DefaultHandler{
         }
 
         if(name.equals("v")) {
+//            String value = this.getDataValue(lastContents.trim(), "");
+//            lastContents = value;
 //            System.out.println("lastContents:"+cellPosition+";"+lastContents);
             //数据读取结束后，将单元格坐标,内容存入map中
             if(!(cellPosition.length()==2)||(cellPosition.length()==2&&!"1".equals(cellPosition.substring(1)))){//不保存第一行数据
+                //列名
+                String pre = cellPosition.substring(0,1);
+
+                if("A".equals(pre) || "B".equals(pre)){
+                    Calendar calendar = new GregorianCalendar(1900,0,-1);
+                    calendar.add(Calendar.DAY_OF_YEAR,Integer.parseInt(lastContents));
+                    //Date d = calendar.getTime();
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+                    lastContents =  sdf.format(calendar.getTime());
+
+                }
                 rowContents.put(cellPosition, lastContents);
             }
         }
     }
 
-    // 判断单元格cell的c标签下是否有v，否则可能数据错位
-   // private boolean hasV = false;
 
 
-//    @Override
-//    public void endElement(String uri, String localName, String qName) throws SAXException {
-////        System.out.println("endElement:"+qName);
-//
-//        //行结束,存储一行数据
-//        if (qName.equals("row")) {
-//
-//            //判断最后一个单元格是否在最后，补齐列数
-//            //【注意】有的单元格只修改单元格格式，而没有内容，会出现c标签下没有v标签，导致currentRow少
-//            if (covertRowIdtoInt(lastCellid) < longest) {
-//                int min = Math.min(currentRow.size(), covertRowIdtoInt(lastCellid));
-//                for (int i = 0; i < longest - min; i++) {
-//                    currentRow.add("");
-//                }
-//            }
-//
-//            container.add(currentRow);
-//            lastCellid = null;
-//        }
-//
-//        //单元格结束，没有v时需要补位
-//        if (qName.equals("c")){
-//            if (!hasV) currentRow.add("");
-//            hasV = false;
-//        }
-//
-//        //单元格内容标签结束，characters方法会被调用处理内容
-//        if (qName.equals("v")) {
-//            hasV = true;
-//            //单元格的值是SST 的索引
-//            if (isSSTIndex) {
-//                String sstIndex = lastContents.toString();
-//                try {
-//                    int idx = Integer.parseInt(sstIndex);
-//                    XSSFRichTextString rtss = new XSSFRichTextString(
-//                            sst.getEntryAt(idx));
-//                    lastContents = rtss.toString();
-//                    currentRow.add(lastContents);
-//                } catch (NumberFormatException ex) {
-//                    System.out.println(lastContents);
-//                }
-//            } else {
-//                currentRow.add(lastContents);
-//            }
-//
-//        }
-//
-//    }
+
+    //用一个enum表示单元格可能的数据类型
+    enum CellDataType{
+        BOOL, ERROR, FORMULA, INLINESTR, SSTINDEX, NUMBER, DATE, NULL
+    }
+
+    private CellDataType nextDataType = CellDataType.SSTINDEX;
+
+    private String formatString;
+
+    private final DataFormatter formatter = new DataFormatter();
+
+    private short formatIndex;
+
+
+    /**
+     * 根据数据类型获取数据
+     * @param value
+     * @param thisStr
+     * @return
+     */
+    public String getDataValue(String value, String thisStr)
+
+    {
+        switch (nextDataType)
+        {
+            //这几个的顺序不能随便交换，交换了很可能会导致数据错误
+            case BOOL:
+                char first = value.charAt(0);
+                thisStr = first == '0' ? "FALSE" : "TRUE";
+                break;
+            case ERROR:
+                thisStr = "\"ERROR:" + value.toString() + '"';
+                break;
+            case FORMULA:
+                thisStr = '"' + value.toString() + '"';
+                break;
+            case INLINESTR:
+                XSSFRichTextString rtsi = new XSSFRichTextString(value.toString());
+                thisStr = rtsi.toString();
+                rtsi = null;
+                break;
+            case SSTINDEX:
+                String sstIndex = value.toString();
+                thisStr = value.toString();
+                break;
+            case NUMBER:
+                if (formatString != null){
+                    thisStr = formatter.formatRawCellContents(Double.parseDouble(value), formatIndex, formatString).trim();
+                }else{
+                    thisStr = value;
+                }
+                thisStr = thisStr.replace("_", "").trim();
+                break;
+            case DATE:
+                try{
+                    thisStr = formatter.formatRawCellContents(Double.parseDouble(value), formatIndex, formatString);
+                }catch(NumberFormatException ex){
+                    thisStr = value.toString();
+                }
+                thisStr = thisStr.replace(" ", "");
+                break;
+            default:
+                thisStr = "";
+                break;
+        }
+        return thisStr;
+    }
+
+
+
 
     /**
      * 列号转数字   AB7-->28 第28列
@@ -185,6 +221,11 @@ public class SheetHandler  extends DefaultHandler{
     @Override
     public void characters(char[] ch, int start, int length)
             throws SAXException {
+        StringBuilder sb = new StringBuilder();
+//        for(int i  =0 ; i < ch.length; i++){
+//            sb.append(ch[i]);
+//        }
+//        System.out.println(" str === " + sb.toString() );
         lastContents += new String(ch, start, length);
     }
 }
