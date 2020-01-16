@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace可以写类的全限定名，这样做的好处是
+　　sqlSession.insert(Student.class.getName()+".addStudent");
+-->
+<mapper namespace="com.bison.inventory.mapper.mybatis.ShenZhenLocalInventroyMapperSkuEx">
+
+
+    <insert id="insert" parameterType="com.bison.inventory.pojo.ShenZhenLocalInventroySku">
+        INSERT INTO `bison_amz_product_inventory`.`sz_local_inventory_sku`
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="productId != null">
+                product_id,
+            </if>
+
+            <if test="supplier != null">
+                supplier,
+            </if>
+
+            <if test="countryOrTraingType != null">
+                country_or_traing_type,
+            </if>
+
+            <if test="sku != null">
+                sku,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="productId != null">
+                #{productId},
+            </if>
+
+            <if test="supplier != null">
+                #{supplier},
+            </if>
+
+            <if test="countryOrTraingType != null">
+                #{countryOrTraingType},
+            </if>
+
+            <if test="sku != null">
+                #{sku},
+            </if>
+
+        </trim>
+
+        ON DUPLICATE KEY UPDATE
+            supplier=VALUES(supplier),
+            country_or_traing_type = values(country_or_traing_type)
+
+
+    </insert>
+</mapper>

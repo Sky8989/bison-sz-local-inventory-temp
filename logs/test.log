@@ -1,0 +1,75 @@
+11:07:36.616 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+11:07:37.906 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+11:07:37.917 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+11:07:37.917 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+11:07:37.922 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+11:07:38.002 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+11:07:38.129 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+11:07:38.280 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+11:07:38.559 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+11:07:38.617 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+11:07:38.619 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+11:07:38.654 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+11:07:38.736 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+11:07:39.176 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+11:07:40.125 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+11:07:40.148 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+11:07:40.148 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+11:07:40.151 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+11:07:40.151 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+11:07:41.095 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+11:07:41.240 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+11:07:41.240 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+11:07:41.335 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+11:07:41.335 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+11:07:41.489 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+11:07:41.507 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+11:07:41.507 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+11:07:41.507 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+11:07:41.507 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+11:07:41.507 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+11:07:41.507 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+11:07:41.507 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+11:07:41.629 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+11:07:41.632 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+11:07:41.634 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+11:07:41.637 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1576552061636 with initial instances count: 8
+11:07:41.641 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1576552061641, current=UP, previous=STARTING]
+11:07:41.642 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ_LOCAL_INVENTORY/sz_local_inventory: registering service...
+11:07:41.645 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+11:07:41.660 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+11:07:41.682 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+11:07:41.687 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ_LOCAL_INVENTORY/sz_local_inventory - registration status: 204
+11:07:41.767 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator  - Generating unique operation named: updateByFileUsingPOST_1
+11:07:41.787 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+11:07:41.790 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+11:07:41.829 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.461 seconds (JVM running for 7.354)
+11:07:46.251 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11:07:46.297 [http-nio-10099-exec-1] INFO  com.bison.inventory.handler.TestAdvertitsingHandler  - info log log4j2
+11:07:46.297 [http-nio-10099-exec-1] WARN  com.bison.inventory.handler.TestAdvertitsingHandler  - info warn log4j2
+11:07:46.297 [http-nio-10099-exec-1] ERROR com.bison.inventory.handler.TestAdvertitsingHandler  - info error log4j2
+11:07:47.703 [http-nio-10099-exec-2] INFO  com.bison.inventory.handler.TestAdvertitsingHandler  - info log log4j2
+11:07:47.703 [http-nio-10099-exec-2] WARN  com.bison.inventory.handler.TestAdvertitsingHandler  - info warn log4j2
+11:07:47.703 [http-nio-10099-exec-2] ERROR com.bison.inventory.handler.TestAdvertitsingHandler  - info error log4j2
+11:07:47.895 [http-nio-10099-exec-3] INFO  com.bison.inventory.handler.TestAdvertitsingHandler  - info log log4j2
+11:07:47.895 [http-nio-10099-exec-3] WARN  com.bison.inventory.handler.TestAdvertitsingHandler  - info warn log4j2
+11:07:47.895 [http-nio-10099-exec-3] ERROR com.bison.inventory.handler.TestAdvertitsingHandler  - info error log4j2
+11:07:48.105 [http-nio-10099-exec-4] INFO  com.bison.inventory.handler.TestAdvertitsingHandler  - info log log4j2
+11:07:48.106 [http-nio-10099-exec-4] WARN  com.bison.inventory.handler.TestAdvertitsingHandler  - info warn log4j2
+11:07:48.106 [http-nio-10099-exec-4] ERROR com.bison.inventory.handler.TestAdvertitsingHandler  - info error log4j2
+11:07:48.281 [http-nio-10099-exec-5] INFO  com.bison.inventory.handler.TestAdvertitsingHandler  - info log log4j2
+11:07:48.281 [http-nio-10099-exec-5] WARN  com.bison.inventory.handler.TestAdvertitsingHandler  - info warn log4j2
+11:07:48.281 [http-nio-10099-exec-5] ERROR com.bison.inventory.handler.TestAdvertitsingHandler  - info error log4j2
+11:07:48.408 [http-nio-10099-exec-6] INFO  com.bison.inventory.handler.TestAdvertitsingHandler  - info log log4j2
+11:07:48.408 [http-nio-10099-exec-6] WARN  com.bison.inventory.handler.TestAdvertitsingHandler  - info warn log4j2
+11:07:48.408 [http-nio-10099-exec-6] ERROR com.bison.inventory.handler.TestAdvertitsingHandler  - info error log4j2
+11:09:44.291 [Thread-8] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1576552184290, current=DOWN, previous=UP]
+11:09:44.291 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ_LOCAL_INVENTORY/sz_local_inventory: registering service...
+11:09:44.310 [Thread-8] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+11:09:44.310 [Thread-8] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+11:09:44.320 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ_LOCAL_INVENTORY/sz_local_inventory - registration status: 204
+11:09:44.321 [Thread-8] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+11:09:44.337 [Thread-8] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ_LOCAL_INVENTORY/sz_local_inventory - deregister  status: 200
+11:09:44.346 [Thread-8] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient

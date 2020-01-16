@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace可以写类的全限定名，这样做的好处是
+　　sqlSession.insert(Student.class.getName()+".addStudent");
+-->
+<mapper namespace="com.bison.inventory.mapper.mybatis.ProductMapperEx">
+
+
+    <select id="findProductIdBySku" resultType="java.lang.Integer" parameterType="java.lang.String">
+        SELECT
+            r1.product_id
+        FROM
+            bison_amz_product_inventory.user_product_amz_asin_rel r1
+        inner join
+            `bison_amz_product_inventory`.`amz_seller_sku` s1
+        on  r1.seller_sku_id = s1.seller_sku_id
+        where
+            s1.sku = #{sku}
+        group by r1.product_id limit 1
+    </select>
+    <select id="findSkuIdBySku" resultType="java.lang.Integer"  parameterType="java.lang.String">
+
+        SELECT
+        seller_sku_id
+        FROM
+        `bison_amz_product_inventory`.`amz_seller_sku`
+        WHERE
+        sku = #{sku}
+            limit 1
+
+    </select>
+    <select id="findAsinIdByAsin" resultType="java.lang.Integer" parameterType="java.lang.String">
+        SELECT
+        a1.asin_id
+        FROM
+        `bison_amz_product_inventory`.`amz_asin` a1
+        WHERE
+        a1.asin = #{asin}
+        GROUP BY a1.asin_id
+
+    </select>
+</mapper>

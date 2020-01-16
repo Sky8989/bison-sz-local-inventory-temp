@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace可以写类的全限定名，这样做的好处是
+　　sqlSession.insert(Student.class.getName()+".addStudent");
+-->
+<mapper namespace="com.bison.inventory.mapper.mybatis.AmzShenZhenLocalInventroyTempEx">
+
+
+    <insert id="insert" parameterType="com.bison.inventory.pojo.AmzShenZhenLocalInventroyTemp">
+        INSERT INTO `bison_amz_product_inventory`.`amz_sz_local_inventroy_temp`
+
+                (product_id,
+
+                upc_quantity,
+
+                fnsku_quantity,
+
+                update_time) values
+
+
+                (#{productId},
+
+
+
+                #{upcQuantity},
+
+
+
+                #{fnskuQuantity},
+
+
+
+                #{updateTime})
+
+
+
+
+        ON DUPLICATE KEY UPDATE
+        upc_quantity=VALUES(upc_quantity),
+        fnsku_quantity = values(fnsku_quantity),
+        update_time = values(update_time)
+
+
+    </insert>
+    <insert id="upcInsertOrUpdateByProductIdList" parameterType="java.lang.Integer">
+    INSERT INTO `bison_amz_product_inventory`.`amz_sz_local_inventroy_temp`
+        (`product_id`,
+        `upc_quantity`,
+        `update_time`)
+    SELECT
+        product_id,
+        (SUM(in_bound_quantity) + SUM(move_in_bound_quantity)) - (SUM(out_bound_quantity) + SUM(move_out_bound_quantity)) upc,
+        now()
+    FROM
+        bison_amz_product_inventory.sz_local_out_in_bound_inventroy
+    WHERE
+        1 = 1 AND inventory_type = 'UPC'
+        AND product_id in
+        <foreach collection="productIdList" item="productId" open="(" close=")" separator=",">
+            #{productId}
+        </foreach>
+
+        GROUP BY product_id
+
+        ON DUPLICATE KEY UPDATE
+        upc_quantity=VALUES(upc_quantity),
+        fnsku_quantity = values(fnsku_quantity),
+        update_time = values(update_time)
+
+    </insert>
+
+    <insert id="fnskuInsertOrUpdateByProductIdList" parameterType="java.lang.Integer">
+        INSERT INTO `bison_amz_product_inventory`.`amz_sz_local_inventroy_temp`
+        (`product_id`,
+        `fnsku_quantity`,
+        `update_time`)
+        SELECT
+        product_id,
+        (SUM(in_bound_quantity) + SUM(move_in_bound_quantity)) - (SUM(out_bound_quantity) + SUM(move_out_bound_quantity)) upc,
+        now()
+        FROM
+        bison_amz_product_inventory.sz_local_out_in_bound_inventroy
+        WHERE
+        1 = 1
+
+        AND inventory_type LIKE '%(%)%'
+        AND product_id in
+        <foreach collection="productIdList" item="productId" open="(" close=")" separator=",">
+            #{productId}
+        </foreach>
+
+        GROUP BY product_id
+
+        ON DUPLICATE KEY UPDATE
+        fnsku_quantity = values(fnsku_quantity),
+        update_time = values(update_time)
+
+    </insert>
+</mapper>

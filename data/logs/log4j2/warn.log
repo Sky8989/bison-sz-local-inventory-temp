@@ -1,0 +1,9 @@
+10:13:07.577 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+10:13:07.583 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+10:35:50.963 [Thread-23] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579055750963, current=DOWN, previous=UP]
+15:53:29.335 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+15:53:29.339 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+16:17:31.669 [Thread-18] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579076251669, current=DOWN, previous=UP]
+16:17:38.921 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+16:17:38.925 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+16:25:06.741 [Thread-18] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579076706741, current=DOWN, previous=UP]

@@ -1,0 +1,176 @@
+10:13:03.059 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+10:13:05.329 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+10:13:05.336 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+10:13:05.337 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+10:13:05.341 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+10:13:05.410 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+10:13:05.530 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+10:13:05.657 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+10:13:05.934 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+10:13:05.990 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+10:13:05.991 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+10:13:06.023 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+10:13:06.114 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+10:13:06.570 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+10:13:07.551 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+10:13:07.577 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+10:13:07.578 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:13:07.583 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+10:13:07.583 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:13:08.468 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+10:13:08.627 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+10:13:08.627 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+10:13:08.718 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+10:13:08.718 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+10:13:08.915 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:13:08.930 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+10:13:09.052 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+10:13:09.055 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+10:13:09.057 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+10:13:09.060 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1579054389059 with initial instances count: 7
+10:13:09.064 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579054389064, current=UP, previous=STARTING]
+10:13:09.065 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+10:13:09.067 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+10:13:09.080 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+10:13:09.100 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+10:13:09.106 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+10:13:09.191 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+10:13:09.194 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+10:13:09.219 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 8.154 seconds (JVM running for 9.859)
+10:14:08.880 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+10:18:08.933 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:23:08.934 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:28:08.935 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:33:08.936 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:35:50.963 [Thread-23] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579055750963, current=DOWN, previous=UP]
+10:35:50.963 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+10:35:50.976 [Thread-23] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+10:35:50.977 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+10:35:50.990 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+10:35:50.990 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+10:35:51.007 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+10:35:51.012 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+15:53:25.900 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+15:53:27.163 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+15:53:27.170 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+15:53:27.170 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+15:53:27.173 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+15:53:27.236 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+15:53:27.344 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+15:53:27.451 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+15:53:27.727 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:53:27.778 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+15:53:27.779 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+15:53:27.808 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+15:53:27.890 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+15:53:28.351 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+15:53:29.309 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:53:29.335 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+15:53:29.335 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+15:53:29.339 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+15:53:29.339 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+15:53:30.214 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+15:53:30.348 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+15:53:30.348 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+15:53:30.455 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+15:53:30.455 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+15:53:30.627 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+15:53:30.641 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+15:53:30.759 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+15:53:30.762 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+15:53:30.764 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+15:53:30.767 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1579074810766 with initial instances count: 8
+15:53:30.772 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579074810772, current=UP, previous=STARTING]
+15:53:30.773 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+15:53:30.776 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+15:53:30.790 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+15:53:30.809 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+15:53:30.813 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+15:53:30.905 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+15:53:30.909 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+15:53:30.923 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.199 seconds (JVM running for 7.04)
+15:58:30.644 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+16:03:30.645 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+16:03:53.846 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:08:30.646 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+16:13:30.647 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+16:17:31.669 [Thread-18] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579076251669, current=DOWN, previous=UP]
+16:17:31.670 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+16:17:31.682 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+16:17:31.682 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+16:17:31.700 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+16:17:31.701 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+16:17:31.725 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+16:17:31.740 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+16:17:35.463 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+16:17:36.733 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+16:17:36.740 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+16:17:36.741 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+16:17:36.744 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+16:17:36.807 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+16:17:36.914 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+16:17:37.032 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+16:17:37.295 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16:17:37.359 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+16:17:37.361 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+16:17:37.405 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:17:37.505 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:17:37.957 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+16:17:38.893 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:17:38.921 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+16:17:38.921 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+16:17:38.925 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+16:17:38.925 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+16:17:39.798 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+16:17:39.931 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+16:17:39.932 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+16:17:40.030 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+16:17:40.030 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+16:17:40.194 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+16:17:40.344 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+16:17:40.347 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+16:17:40.350 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+16:17:40.355 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1579076260354 with initial instances count: 9
+16:17:40.362 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579076260362, current=UP, previous=STARTING]
+16:17:40.363 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+16:17:40.368 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+16:17:40.391 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+16:17:40.413 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+16:17:40.419 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+16:17:40.534 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+16:17:40.537 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+16:17:40.549 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.148 seconds (JVM running for 7.095)
+16:22:40.213 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+16:25:06.741 [Thread-18] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579076706741, current=DOWN, previous=UP]
+16:25:06.742 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+16:25:06.754 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+16:25:06.755 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+16:25:06.772 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+16:25:06.772 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+16:25:06.789 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+16:25:06.797 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
