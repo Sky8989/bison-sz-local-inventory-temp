@@ -1,6 +1,7 @@
 package com.bison.inventory.handler;
 
 
+import com.bison.inventory.config.MultipartFileConfig;
 import com.bison.inventory.constant.ShenZhenLocalInventoryCertificateType;
 import com.bison.inventory.constant.ShenZhenLocalInventoryOutInBoundType;
 import com.bison.inventory.mapper.jpa.ProductMapper;
@@ -11,19 +12,22 @@ import com.bison.inventory.pojo.AmzShenZhenLocalInventroyTemp;
 import com.bison.inventory.pojo.Product;
 import com.bison.inventory.pojo.ShenZhenLocalInventroySku;
 import com.bison.inventory.pojo.ShenZhenLocalOutInBoundInventroy;
+import com.bison.inventory.util.FileUploadUtil;
 import com.bison.inventory.util.excel.ImportExcelUtil;
 import com.bison.inventory.util.excel.entity.ResultBean;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.ss.usermodel.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
+import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -51,9 +55,13 @@ public class LocalShenZhenInventoryHandler {
     @Autowired
     AmzShenZhenLocalInventroyTempEx amzShenZhenLocalInventroyTempEx;
 
+
     List<ShenZhenLocalOutInBoundInventroy> localInventoryList;
 
     Map<String,Integer> map;
+
+    @Value("${tempFilePath}")
+    String tempFilePath;
 
 
     @ApiOperation(value = "上传深圳本地仓库存文件")
@@ -62,6 +70,7 @@ public class LocalShenZhenInventoryHandler {
     @Transactional
     public ResultBean updateByFile(@RequestParam(value = "file")
                                            MultipartFile file) throws IOException {
+
         ResultBean resultBean = new ResultBean();
         try {
             if(null != file) {
@@ -71,46 +80,50 @@ public class LocalShenZhenInventoryHandler {
             //初始化 产品 map
             map =  getProductMap();
 
-            Long time=System.currentTimeMillis();
+
 
             ImportExcelUtil.checkFile(file);
+
+
             //解析 excel
             ImportExcelUtil example = new ImportExcelUtil();
 
+            //上传到指定路径 并转成File
+           File f =  MultipartFileToFile1(file);
 
+           if(f == null){
+                resultBean.setCode(500);
+                resultBean.setMsg("文件不存在");
+               return resultBean;
+           }
 
 //        example.processOneSheet("/home/leaderment/桌面/inventory/深圳仓库出入库明细录入表格01月11日.xlsx");
 //            example.processOneSheet("c:/Users/31719/Desktop/深圳仓库出入库明细录入表格01月14日.xlsx");
-            example.processOneSheet(file.getOriginalFilename());
-            ;
 
-            Long endtime=System.currentTimeMillis();
-            LinkedHashMap<String, String>  map=example.getRowContents();
-            Iterator<Map.Entry<String, String>> it= map.entrySet().iterator();
 
-            //初始化本地仓库存列表
-            localInventoryList = new ArrayList<>(map.size());
+            //解析第一页
+            example.processOneSheet(f.getAbsolutePath());
 
-            int count=0;
-            String prePos="";
-            while (it.hasNext()){
-                Map.Entry<String, String> entry=(Map.Entry<String, String>)it.next();
-                String pos=entry.getKey();
-                if(!pos.substring(1).equals(prePos)){
-                    prePos=pos.substring(1);
-                    count++;
-                }
-                System.out.println(pos+";"+entry.getValue());
+            getInventoryList(example,1);
 
-                boolean flag = saveDB(pos,entry.getValue());
+            System.out.println(" 第一页 localInventoryList   size === " +  localInventoryList.size());
 
-                if(flag){
-                    break;
-                }
-            }
-            System.out.println("解析数据"+count+"条;耗时"+(endtime-time)/1000+"秒");
+            saveLocalInventoryListToDB(localInventoryList);
 
-            System.out.println(" localInventoryList   size === " +  localInventoryList.size());
+            int pageSize = 2;
+            example.processSheetsByPageSize(f.getAbsolutePath(),pageSize);
+
+            getInventoryList(example,2);
+
+            System.out.println(" 第二页  localInventoryList   size === " +  localInventoryList.size());
+
+            saveLocalInventoryListToDB(localInventoryList);
+
+            resultBean.setMsg("插入数据成功");
+
+            //删除excel
+            delLocalPathFile(file.getOriginalFilename());
+
         } catch (Exception e) {
             e.printStackTrace();
             resultBean.setMsg(e.getMessage());
@@ -122,186 +135,345 @@ public class LocalShenZhenInventoryHandler {
         return resultBean;
     }
 
+    private void delLocalPathFile(String name) {
+
+        File file = new File(FileUploadUtil.getRootPath() + "/" +tempFilePath+"/"+name);
+        if(file.exists()){
+            file.delete();
+        }
+        System.out.println("删除文件成功 " + file.getName());
+    }
+
+    private void saveLocalInventoryListToDB(List<ShenZhenLocalOutInBoundInventroy> localInventoryList) {
+
+        long startTime = System.currentTimeMillis();
+        int totalNum = localInventoryList.size();
+
+        System.out.println("total Num = " + totalNum);
+       int size = 10;
+       int startPage = 0;
+       int endPage = 0;
+
+       int i = 0;
+       while (totalNum > i * size){
+             i++;
+
+            startPage = endPage;
+
+            endPage = i * size;
+
+//           System.out.println("startPage = " + startPage);
+
+           //最大
+           if(startPage * size > totalNum)
+               size = totalNum;
 
 
+           List<ShenZhenLocalOutInBoundInventroy> list = localInventoryList.subList(startPage,endPage);
 
-    private boolean saveDB(String pos, String value) throws ParseException {
+           shenZhenLocalOutInBoundInventroyMapperEx.batchInsert(list);
+       }
+        long endTime = System.currentTimeMillis();
+        System.out.println("插入总数据"+ totalNum +"到数据库 需要时间 = " + ( (endTime - startTime)/ 1000.0 ) +" 秒 " );
 
-        /**
-         * 一般为 A B C D E F G H 等
-         */
-        String col = pos.substring(0,1);
+    }
 
-        SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private void getInventoryList(ImportExcelUtil example,int pageNum) throws ParseException {
+        Long time=System.currentTimeMillis();
+        LinkedHashMap<String, String>  map=example.getRowContents();
+        Iterator<Map.Entry<String, String>> it= map.entrySet().iterator();
+
+        //初始化本地仓库存列表
+         localInventoryList = new ArrayList<>(map.size());
+
+        int count=0;
+        String prePos="";
+        while (it.hasNext()){
+            Map.Entry<String, String> entry=(Map.Entry<String, String>)it.next();
+            String pos=entry.getKey();
+            if(!pos.substring(1).equals(prePos)){
+                prePos=pos.substring(1);
+                count++;
+            }
+//            System.out.println(pos+";"+entry.getValue());
 
 
-        ShenZhenLocalOutInBoundInventroy shenZhenLocalOutInBoundInventroy = new ShenZhenLocalOutInBoundInventroy();
+            boolean flag = getList(pos,entry.getValue(),pageNum);
 
-        switch (col){
-            case "A" :
-                //收货日期
-//                Date date = new Date(Long.parseLong(value));
-//                System.out.println("date = " + date);
-                shenZhenLocalOutInBoundInventroy.setReceiptDate(simpleFormat.parse(value));
+            if(flag){
                 break;
+            }
+        }
 
-            case "B" :
-                //出入库日期
+        Long endtime=System.currentTimeMillis();
 
-//                Date date = new Date(Long.parseLong(value));
-//                System.out.println("date = " + date);
-                shenZhenLocalOutInBoundInventroy.setOutInBoundDate(simpleFormat.parse(value));
-
-                break;
-
-            case "C" :
-                //送货单号
-//                Date date = new Date(Long.parseLong(value));
-//                System.out.println("date = " + date);
-                shenZhenLocalOutInBoundInventroy.setDeliveryNoteNumber(value);
-
-                break;
-
-            case "D" :
-                //送检单号
-//                Date date = new Date(Long.parseLong(value));
-                shenZhenLocalOutInBoundInventroy.setSendCheckNumber(value);
-
-                break;
-
-            case "E" :
-                //出入库类型
-                /**
-                 * 出入库类型
-                 */
-                String outInBoundType =  value;
-
-                int num = 0;
-                switch (outInBoundType){
-                    case ShenZhenLocalInventoryOutInBoundType
-                            .IN_BOUND:
-                        num = 1;
-                        break;
-                    case ShenZhenLocalInventoryOutInBoundType
-                            .OUT_BOUND:
-                        num = 2;
-                        break;
-                    case ShenZhenLocalInventoryOutInBoundType
-                            .ADJUSTMENTINVENTORY_WAREHOUSE:
-                        num = 3;
-                        break;
-                }
-                shenZhenLocalOutInBoundInventroy.setOutInBoundTypeId(num);
-
-                break;
-
-            case "F" :
-                //凭证类型
-                String certificateType =  value;
-                num = 0;
-                switch (certificateType){
-
-                    case ShenZhenLocalInventoryCertificateType.IN_BOUND_ORDER:
-                        num = 1;
-                        break;
-
-                    case ShenZhenLocalInventoryCertificateType.OHTER_IN_BOUND_ORDER:
-                        num = 2;
-                        break;
-
-                    case ShenZhenLocalInventoryCertificateType.OUT_BOUND:
-                        num = 3;
-                        break;
-
-                    case ShenZhenLocalInventoryCertificateType.OUT_BOUND_ORDER:
-                        num = 4;
-                        break;
-                    case ShenZhenLocalInventoryCertificateType.OHTER_OUT_BOUND_ORDER:
-                        num = 5;
-                        break;
-                    case ShenZhenLocalInventoryCertificateType.MOVE_INVENTORY_ORDER:
-                        num = 6;
-                        break;
-                    case ShenZhenLocalInventoryCertificateType.ADJUSTMENTINVENTORY_ORDER:
-                        num = 7;
-                        break;
-                    case ShenZhenLocalInventoryCertificateType.RETURN_OUT_BOUND_ORDER:
-                        num = 8;
-                        break;
-                    case ShenZhenLocalInventoryCertificateType.BALANCE_IN_BOUND:
-                        num = 9;
-                        break;
-                }
-                shenZhenLocalOutInBoundInventroy.setCertificateTypeId(num);
+        System.out.println("解析数据"+count+"条;耗时"+(endtime-time)/1000+"秒");
 
 
-                break;
+    }
 
-            case "G" :
-                //凭证号
-                shenZhenLocalOutInBoundInventroy.setCertificateNumber(value);
 
-                break;
+    /**
+     * MultipartFile 转成 File 文件
+     */
+    private File MultipartFileToFile1(MultipartFile multipartFile){
+        String filePath = null;
+        try {
+            filePath = FileUploadUtil.uploadOne(multipartFile,tempFilePath);
+            System.out.println("filePath ===" + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-            case "H" :
-                //sku
-                shenZhenLocalOutInBoundInventroy.setSku(value);
+        File file = new File(filePath);
 
-                break;
+        return file;
 
-            case "I" :
-                //型号
-                String modelNumber = value;
-                Integer productId = map.get(modelNumber);
-                shenZhenLocalOutInBoundInventroy.setProductId(productId);
-                break;
+    }
 
-            case "J" :
-                //供应商
-                shenZhenLocalOutInBoundInventroy.setSupplierAbbreviation(value);
-                break;
 
-            case "k" :
-                //向别
-                shenZhenLocalOutInBoundInventroy.setInventoryType(value);
+    /**
+     * MultipartFile 转成 File 文件
+     * @param multipartFile
+     * @return
+     */
+    private File MultipartFileToFile(MultipartFile multipartFile) {
 
-                break;
+        int n;
+       File f = new File(FileUploadUtil.getRootPath() + "/" +tempFilePath+"/"+multipartFile.getOriginalFilename());
 
-            case "L" :
-                //入库数量
-                shenZhenLocalOutInBoundInventroy.setInBoundQuantity(Integer.parseInt(value));
 
-                break;
+        if(!f.exists()) {
+//            File f1 = new File(f.getParent());
+            f.getParentFile().mkdirs();
+        }
 
-            case "M" :
-                //移仓数量（入）
-                shenZhenLocalOutInBoundInventroy.setMoveInBoundQuantity(Integer.parseInt(value));
-                break;
-
-            case "N" :
-                //出库数量
-                shenZhenLocalOutInBoundInventroy.setOutBoundQuantity(Integer.parseInt(value));
-                break;
-
-            case "O" :
-                //移仓数量（出）
-                shenZhenLocalOutInBoundInventroy.setMoveOutBoundQuantity(Integer.parseInt(value));
-                break;
-
-            case "P" :
-                //备注
-                shenZhenLocalOutInBoundInventroy.setRemarks(value);
-
-                break;
+        InputStream in  = null;
+        try {
+            in = multipartFile.getInputStream();
+            //文件传输
+            FileUtils.copyInputStreamToFile(in, f);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
 
+        return f;
 
-        int row = Integer.parseInt(pos.substring(1,pos.length()));
+//        try (InputStream in  = multipartFile.getInputStream(); OutputStream os = new FileOutputStream(f)){
+//            // 得到文件流。以文件流的方式输出到新文件
+//            // 可以使用byte[] ss = multipartFile.getBytes();代替while
+//            byte[] buffer = new byte[4096];
+//            while ((n = in.read(buffer,0,4096)) != -1){
+//                os.write(buffer,0,n);
+//            }
+//            // 读取文件第一行
+//            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
+//            System.out.println(bufferedReader.readLine());
+//            // 输出路径
+//            bufferedReader.close();
+//
+//            return f;
+//        }catch (IOException e){
+//            e.printStackTrace();
+//        }
+
+
+    }
+
+
+    int rowNum = -1;
+    ShenZhenLocalOutInBoundInventroy shenZhenLocalOutInBoundInventroy = new ShenZhenLocalOutInBoundInventroy();;
+
+    private boolean getList(String pos, String value,int pageNum) throws ParseException {
+
+        int num1 = Integer.parseInt(pos.substring(1,pos.length()));
+
+        if(rowNum != num1){
+
+            if(rowNum  != -1){
+                shenZhenLocalOutInBoundInventroy.setAutoId(rowNum);
+                shenZhenLocalOutInBoundInventroy.setTransactionType(pageNum);
+                localInventoryList.add(shenZhenLocalOutInBoundInventroy);
+            }
+
+            shenZhenLocalOutInBoundInventroy = new ShenZhenLocalOutInBoundInventroy();
+
+            rowNum = num1;
+
+
+        }
+
+            /**
+             * 一般为 A B C D E F G H 等
+             */
+            String col = pos.substring(0, 1);
+
+            SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+
+            switch (col) {
+                case "A":
+                    //收货日期
+//                Date date = new Date(Long.parseLong(value));
+//                System.out.println("date = " + date);
+                    shenZhenLocalOutInBoundInventroy.setReceiptDate(simpleFormat.parse(value));
+                    break;
+
+                case "B":
+                    //出入库日期
+
+//                Date date = new Date(Long.parseLong(value));
+//                System.out.println("date = " + date);
+                    shenZhenLocalOutInBoundInventroy.setOutInBoundDate(simpleFormat.parse(value));
+
+                    break;
+
+                case "C":
+                    //送货单号
+//                Date date = new Date(Long.parseLong(value));
+//                System.out.println("date = " + date);
+                    shenZhenLocalOutInBoundInventroy.setDeliveryNoteNumber(value);
+
+                    break;
+
+                case "D":
+                    //送检单号
+//                Date date = new Date(Long.parseLong(value));
+                    shenZhenLocalOutInBoundInventroy.setSendCheckNumber(value);
+
+                    break;
+
+                case "E":
+                    //出入库类型
+                    /**
+                     * 出入库类型
+                     */
+                    String outInBoundType = value;
+
+                    int num = 0;
+                    switch (outInBoundType) {
+                        case ShenZhenLocalInventoryOutInBoundType
+                                .IN_BOUND:
+                            num = 1;
+                            break;
+                        case ShenZhenLocalInventoryOutInBoundType
+                                .OUT_BOUND:
+                            num = 2;
+                            break;
+                        case ShenZhenLocalInventoryOutInBoundType
+                                .ADJUSTMENTINVENTORY_WAREHOUSE:
+                            num = 3;
+                            break;
+                    }
+                    shenZhenLocalOutInBoundInventroy.setOutInBoundTypeId(num);
+
+                    break;
+
+                case "F":
+                    //凭证类型
+                    String certificateType = value;
+                    num = 0;
+                    switch (certificateType) {
+
+                        case ShenZhenLocalInventoryCertificateType.IN_BOUND_ORDER:
+                            num = 1;
+                            break;
+
+                        case ShenZhenLocalInventoryCertificateType.OHTER_IN_BOUND_ORDER:
+                            num = 2;
+                            break;
+
+                        case ShenZhenLocalInventoryCertificateType.OUT_BOUND:
+                            num = 3;
+                            break;
+
+                        case ShenZhenLocalInventoryCertificateType.OUT_BOUND_ORDER:
+                            num = 4;
+                            break;
+                        case ShenZhenLocalInventoryCertificateType.OHTER_OUT_BOUND_ORDER:
+                            num = 5;
+                            break;
+                        case ShenZhenLocalInventoryCertificateType.MOVE_INVENTORY_ORDER:
+                            num = 6;
+                            break;
+                        case ShenZhenLocalInventoryCertificateType.ADJUSTMENTINVENTORY_ORDER:
+                            num = 7;
+                            break;
+                        case ShenZhenLocalInventoryCertificateType.RETURN_OUT_BOUND_ORDER:
+                            num = 8;
+                            break;
+                        case ShenZhenLocalInventoryCertificateType.BALANCE_IN_BOUND:
+                            num = 9;
+                            break;
+                    }
+                    shenZhenLocalOutInBoundInventroy.setCertificateTypeId(num);
+
+
+                    break;
+
+                case "G":
+                    //凭证号
+                    shenZhenLocalOutInBoundInventroy.setCertificateNumber(value);
+
+                    break;
+
+                case "H":
+                    //sku
+                    shenZhenLocalOutInBoundInventroy.setSku(value);
+
+                    break;
+
+                case "I":
+                    //型号
+                    String modelNumber = value;
+                    Integer productId = map.get(modelNumber);
+                    shenZhenLocalOutInBoundInventroy.setProductId(productId);
+                    break;
+
+                case "J":
+                    //供应商
+                    shenZhenLocalOutInBoundInventroy.setSupplierAbbreviation(value);
+                    break;
+
+                case "K":
+                    //向别
+                    shenZhenLocalOutInBoundInventroy.setInventoryType(value);
+
+                    break;
+
+                case "L":
+                    //入库数量
+                    shenZhenLocalOutInBoundInventroy.setInBoundQuantity(Integer.parseInt(value));
+
+                    break;
+
+                case "M":
+                    //移仓数量（入）
+                    shenZhenLocalOutInBoundInventroy.setMoveInBoundQuantity(Integer.parseInt(value));
+                    break;
+
+                case "N":
+                    //出库数量
+                    shenZhenLocalOutInBoundInventroy.setOutBoundQuantity(Integer.parseInt(value));
+                    break;
+
+                case "O":
+                    //移仓数量（出）
+                    shenZhenLocalOutInBoundInventroy.setMoveOutBoundQuantity(Integer.parseInt(value));
+                    break;
+
+                case "P":
+                    //备注
+                    shenZhenLocalOutInBoundInventroy.setRemarks(value);
+
+                    break;
+            }
+
 
         //判断是否结束
         String endStr = "#N/A";
-        if(endStr.equalsIgnoreCase(value)){
+        if (endStr.equalsIgnoreCase(value)) {
             return true;
         }
 

@@ -50,7 +50,11 @@
         `update_time`)
     SELECT
         product_id,
-        (SUM(in_bound_quantity) + SUM(move_in_bound_quantity)) - (SUM(out_bound_quantity) + SUM(move_out_bound_quantity)) upc,
+
+        if( (SUM(in_bound_quantity) + SUM(move_in_bound_quantity)) - (SUM(out_bound_quantity) + SUM(move_out_bound_quantity)) is null,
+        0,
+        (SUM(in_bound_quantity) + SUM(move_in_bound_quantity)) - (SUM(out_bound_quantity) + SUM(move_out_bound_quantity))) as upc,
+
         now()
     FROM
         bison_amz_product_inventory.sz_local_out_in_bound_inventroy
@@ -77,7 +81,11 @@
         `update_time`)
         SELECT
         product_id,
-        (SUM(in_bound_quantity) + SUM(move_in_bound_quantity)) - (SUM(out_bound_quantity) + SUM(move_out_bound_quantity)) upc,
+        if((SUM(in_bound_quantity) + SUM(move_in_bound_quantity)) - (SUM(out_bound_quantity) +
+        SUM(move_out_bound_quantity)) is null,
+        0,
+        (SUM(in_bound_quantity) + SUM(move_in_bound_quantity)) - (SUM(out_bound_quantity) +
+        SUM(move_out_bound_quantity))) as fnsku,
         now()
         FROM
         bison_amz_product_inventory.sz_local_out_in_bound_inventroy

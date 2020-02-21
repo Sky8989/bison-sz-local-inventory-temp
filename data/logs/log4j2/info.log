@@ -1,309 +1,1031 @@
-10:13:03.059 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
-10:13:05.329 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
-10:13:05.336 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
-10:13:05.337 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
-10:13:05.341 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-10:13:05.410 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
-10:13:05.530 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
-10:13:05.657 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
-10:13:05.934 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+09:21:22.828 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:21:24.694 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:21:24.703 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:21:24.703 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:21:24.708 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:21:24.790 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:21:24.966 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:21:25.105 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:21:25.394 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-10:13:05.990 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
-10:13:05.991 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
-10:13:06.023 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-10:13:06.114 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-10:13:06.570 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
-10:13:07.551 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-10:13:07.577 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
-10:13:07.578 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-10:13:07.583 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
-10:13:07.583 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-10:13:08.468 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
-10:13:08.627 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
-10:13:08.627 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
-10:13:08.718 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
-10:13:08.718 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
-10:13:08.915 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-10:13:08.930 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
-10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
-10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
-10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
-10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
-10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
-10:13:08.931 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
-10:13:09.052 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
-10:13:09.055 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
-10:13:09.057 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
-10:13:09.060 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1579054389059 with initial instances count: 7
-10:13:09.064 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579054389064, current=UP, previous=STARTING]
-10:13:09.065 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
-10:13:09.067 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
-10:13:09.080 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
-10:13:09.100 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
-10:13:09.106 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
-10:13:09.191 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
-10:13:09.194 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
-10:13:09.219 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 8.154 seconds (JVM running for 9.859)
-10:14:08.880 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
-10:18:08.933 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-10:23:08.934 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-10:28:08.935 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-10:33:08.936 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-10:35:50.963 [Thread-23] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579055750963, current=DOWN, previous=UP]
-10:35:50.963 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
-10:35:50.976 [Thread-23] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
-10:35:50.977 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
-10:35:50.990 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
-10:35:50.990 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
-10:35:51.007 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
-10:35:51.012 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
-15:53:25.900 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
-15:53:27.163 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
-15:53:27.170 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
-15:53:27.170 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
-15:53:27.173 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-15:53:27.236 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
-15:53:27.344 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
-15:53:27.451 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
-15:53:27.727 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+09:21:25.534 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:21:25.537 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:21:25.591 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:21:25.774 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:21:26.312 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:21:27.511 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:21:27.542 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:21:27.543 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:21:27.548 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:21:27.548 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:21:28.637 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:21:28.882 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:21:28.882 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:21:29.014 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:21:29.015 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:21:29.246 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:21:29.262 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:21:29.262 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:21:29.262 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:21:29.262 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:21:29.262 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:21:29.262 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:21:29.262 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:21:29.382 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:21:29.384 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:21:29.386 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:21:29.389 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582248089389 with initial instances count: 3
+09:21:29.394 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582248089394, current=UP, previous=STARTING]
+09:21:29.395 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:21:29.398 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:21:29.416 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:21:29.426 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:21:29.438 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:21:29.545 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:21:29.550 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:21:29.564 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 8.0 seconds (JVM running for 9.439)
+09:23:23.122 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09:24:30.125 [Thread-23] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582248270125, current=DOWN, previous=UP]
+09:24:30.125 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:24:30.131 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:24:30.153 [Thread-23] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+09:24:30.154 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+09:24:33.155 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+09:24:33.165 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+09:24:33.189 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+09:24:37.968 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:24:39.258 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:24:39.266 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:24:39.267 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:24:39.270 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:24:39.411 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:24:39.536 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:24:39.644 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:24:39.881 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-15:53:27.778 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
-15:53:27.779 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
-15:53:27.808 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-15:53:27.890 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-15:53:28.351 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
-15:53:29.309 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-15:53:29.335 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
-15:53:29.335 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-15:53:29.339 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
-15:53:29.339 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-15:53:30.214 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
-15:53:30.348 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
-15:53:30.348 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
-15:53:30.455 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
-15:53:30.455 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
-15:53:30.627 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-15:53:30.641 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
-15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
-15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
-15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
-15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
-15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
-15:53:30.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
-15:53:30.759 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
-15:53:30.762 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
-15:53:30.764 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
-15:53:30.767 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1579074810766 with initial instances count: 8
-15:53:30.772 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579074810772, current=UP, previous=STARTING]
-15:53:30.773 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
-15:53:30.776 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
-15:53:30.790 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
-15:53:30.809 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
-15:53:30.813 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
-15:53:30.905 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
-15:53:30.909 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
-15:53:30.923 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.199 seconds (JVM running for 7.04)
-15:58:30.644 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-16:03:30.645 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-16:03:53.846 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
-16:08:30.646 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-16:13:30.647 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-16:17:31.669 [Thread-18] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579076251669, current=DOWN, previous=UP]
-16:17:31.670 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
-16:17:31.682 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
-16:17:31.682 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
-16:17:31.700 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
-16:17:31.701 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
-16:17:31.725 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
-16:17:31.740 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
-16:17:35.463 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
-16:17:36.733 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
-16:17:36.740 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
-16:17:36.741 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
-16:17:36.744 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-16:17:36.807 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
-16:17:36.914 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
-16:17:37.032 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
-16:17:37.295 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+09:24:39.935 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:24:39.936 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:24:39.969 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:24:40.061 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:24:40.581 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:24:41.618 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:24:41.646 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:24:41.646 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:24:41.650 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:24:41.651 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:24:42.629 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:24:42.768 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:24:42.768 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:24:42.863 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:24:42.863 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:24:43.038 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:24:43.054 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:24:43.054 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:24:43.054 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:24:43.054 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:24:43.054 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:24:43.054 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:24:43.054 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:24:43.163 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:24:43.166 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:24:43.168 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:24:43.171 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582248283171 with initial instances count: 4
+09:24:43.175 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582248283175, current=UP, previous=STARTING]
+09:24:43.176 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:24:43.179 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:24:43.195 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:24:43.216 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:24:43.233 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:24:43.316 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:24:43.321 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:24:43.334 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.565 seconds (JVM running for 7.466)
+09:24:47.078 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09:24:47.122 [http-nio-10099-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: The temporary upload location [/tmp/tomcat.4648224647858374842.10099/work/Tomcat/localhost/ROOT/temp/file] is not valid] with root cause
+java.io.IOException: The temporary upload location [/tmp/tomcat.4648224647858374842.10099/work/Tomcat/localhost/ROOT/temp/file] is not valid
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2877) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3242) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1136) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:381) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:84) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+09:29:43.056 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:30:04.271 [Thread-19] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582248604271, current=DOWN, previous=UP]
+09:30:04.272 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:30:04.281 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:30:04.307 [Thread-19] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+09:30:04.308 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+09:30:07.309 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+09:30:07.322 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+09:30:07.356 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+09:30:12.729 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:30:14.285 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:30:14.293 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:30:14.293 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:30:14.297 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:30:14.369 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:30:14.491 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:30:14.609 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:30:14.830 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-16:17:37.359 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
-16:17:37.361 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
-16:17:37.405 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-16:17:37.505 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-16:17:37.957 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
-16:17:38.893 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-16:17:38.921 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
-16:17:38.921 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-16:17:38.925 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
-16:17:38.925 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-16:17:39.798 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
-16:17:39.931 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
-16:17:39.932 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
-16:17:40.030 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
-16:17:40.030 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
-16:17:40.194 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
-16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
-16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
-16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
-16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
-16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
-16:17:40.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
-16:17:40.344 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
-16:17:40.347 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
-16:17:40.350 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
-16:17:40.355 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1579076260354 with initial instances count: 9
-16:17:40.362 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579076260362, current=UP, previous=STARTING]
-16:17:40.363 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
-16:17:40.368 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
-16:17:40.391 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
-16:17:40.413 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
-16:17:40.419 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
-16:17:40.534 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
-16:17:40.537 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
-16:17:40.549 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.148 seconds (JVM running for 7.095)
-16:22:40.213 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
-16:25:06.741 [Thread-18] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1579076706741, current=DOWN, previous=UP]
-16:25:06.742 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
-16:25:06.754 [Thread-18] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
-16:25:06.755 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
-16:25:06.772 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
-16:25:06.772 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
-16:25:06.789 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
-16:25:06.797 [Thread-18] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
-11:51:35.594 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
-11:51:37.718 [main] ERROR org.apache.catalina.core.AprLifecycleListener  - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
-11:51:37.952 [main] ERROR org.apache.catalina.core.AprLifecycleListener  - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
-11:51:37.953 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
-11:51:37.965 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
-11:51:37.965 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
-11:51:37.970 [localhost-startStop-1] ERROR org.apache.catalina.core.AprLifecycleListener  - An incompatible version [1.1.29] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
-11:51:38.241 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
-11:51:38.445 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
-11:51:38.615 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
-11:51:59.794 [Druid-ConnectionPool-Create-1996385500] ERROR com.alibaba.druid.pool.DruidDataSource  - create connection SQLException, url: jdbc:mysql://10.0.50.101:3306/bison?useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=utf8, errorCode 0, state 08S01
-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_45]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_45]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_45]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_45]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_45]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_45]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_45]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_45]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2466) [druid-1.1.9.jar:1.1.9]
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_45]
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_45]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_45]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_45]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_45]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_45]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_45]
-	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_45]
-	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	... 18 more
-11:52:20.808 [Druid-ConnectionPool-Create-1996385500] ERROR com.alibaba.druid.pool.DruidDataSource  - create connection SQLException, url: jdbc:mysql://10.0.50.101:3306/bison?useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=utf8, errorCode 0, state 08S01
-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_45]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_45]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_45]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_45]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_45]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_45]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_45]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_45]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2466) [druid-1.1.9.jar:1.1.9]
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_45]
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_45]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_45]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_45]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_45]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_45]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_45]
-	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_45]
-	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	... 18 more
-11:52:42.317 [Druid-ConnectionPool-Create-1996385500] ERROR com.alibaba.druid.pool.DruidDataSource  - create connection SQLException, url: jdbc:mysql://10.0.50.101:3306/bison?useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=utf8, errorCode 0, state 08S01
-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_45]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_45]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_45]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_45]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_45]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_45]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_45]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_45]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578) ~[druid-1.1.9.jar:1.1.9]
-	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2466) [druid-1.1.9.jar:1.1.9]
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_45]
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_45]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_45]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_45]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_45]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_45]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_45]
-	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_45]
-	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	... 18 more
+09:30:14.893 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:30:14.895 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:30:14.935 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:30:15.049 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:30:15.509 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:30:16.551 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:30:16.577 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:30:16.577 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:30:16.582 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:30:16.582 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:30:17.623 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:30:17.766 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:30:17.767 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:30:17.863 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:30:17.863 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:30:18.067 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:30:18.084 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:30:18.084 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:30:18.084 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:30:18.084 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:30:18.084 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:30:18.084 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:30:18.084 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:30:18.192 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:30:18.195 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:30:18.197 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:30:18.200 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582248618199 with initial instances count: 3
+09:30:18.204 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582248618204, current=UP, previous=STARTING]
+09:30:18.205 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:30:18.209 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:30:18.225 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:30:18.243 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:30:18.252 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:30:18.367 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:30:18.372 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:30:18.387 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 7.048 seconds (JVM running for 8.002)
+09:30:19.708 [http-nio-10099-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09:30:26.425 [http-nio-10099-exec-6] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: The temporary upload location [/tmp/tomcat.9188621537785527588.10099/work/Tomcat/localhost/ROOT/temp/file] is not valid] with root cause
+java.io.IOException: The temporary upload location [/tmp/tomcat.9188621537785527588.10099/work/Tomcat/localhost/ROOT/temp/file] is not valid
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2877) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3242) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1136) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:381) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:84) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+09:31:10.921 [Thread-19] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582248670921, current=DOWN, previous=UP]
+09:31:10.923 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:31:10.937 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:31:10.960 [Thread-19] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+09:31:10.960 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+09:31:13.962 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+09:31:13.969 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+09:31:14.004 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+09:31:18.721 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:31:22.299 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:31:22.325 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:31:22.327 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:31:22.349 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:31:22.691 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:31:23.240 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:31:23.506 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:31:24.072 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+09:31:24.208 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:31:24.210 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:31:24.312 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:31:24.568 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:31:25.907 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:31:28.730 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:31:28.826 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:31:28.827 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:31:28.835 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:31:28.836 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:31:31.414 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:31:31.625 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:31:31.625 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:31:31.756 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:31:31.757 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:31:31.801 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:31:32.069 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:31:32.095 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:31:32.096 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:31:32.096 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:31:32.096 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:31:32.096 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:31:32.096 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:31:32.097 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:31:32.270 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:31:32.273 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:31:32.279 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:31:32.284 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582248692282 with initial instances count: 3
+09:31:32.290 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582248692290, current=UP, previous=STARTING]
+09:31:32.301 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:31:32.304 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:31:32.323 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:31:32.356 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:31:32.359 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:31:32.480 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:31:32.485 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:31:32.500 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 15.05 seconds (JVM running for 15.949)
+09:33:22.244 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09:33:22.300 [http-nio-10099-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: The temporary upload location [/temp/file] is not valid] with root cause
+java.io.IOException: The temporary upload location [/temp/file] is not valid
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2877) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3242) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1136) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:381) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:84) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+09:33:35.908 [http-nio-10099-exec-7] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: The temporary upload location [/temp/file] is not valid] with root cause
+java.io.IOException: The temporary upload location [/temp/file] is not valid
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2877) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3242) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1136) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:381) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:84) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+09:35:01.133 [Thread-33] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582248901132, current=DOWN, previous=UP]
+09:35:01.135 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:35:01.143 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:35:01.169 [Thread-33] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+09:35:01.169 [Thread-33] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+09:35:04.170 [Thread-33] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+09:35:04.171 [DiscoveryClient-0] WARN  com.netflix.discovery.TimedSupervisorTask  - task supervisor shutting down, can't accept the task
+09:35:04.184 [Thread-33] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+09:35:04.215 [Thread-33] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+09:35:09.289 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:35:10.719 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:35:10.727 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:35:10.728 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:35:10.732 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:35:10.813 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:35:10.932 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:35:11.054 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:35:11.268 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+09:35:11.338 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:35:11.339 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:35:11.380 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:35:11.507 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:35:11.995 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:35:13.041 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:35:13.069 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:35:13.069 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:35:13.073 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:35:13.073 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:35:14.035 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:35:14.186 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:35:14.186 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:35:14.282 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:35:14.283 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:35:14.471 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:35:14.492 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:35:14.492 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:35:14.492 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:35:14.492 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:35:14.492 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:35:14.492 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:35:14.492 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:35:14.628 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:35:14.630 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:35:14.633 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:35:14.637 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582248914636 with initial instances count: 4
+09:35:14.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582248914641, current=UP, previous=STARTING]
+09:35:14.643 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:35:14.646 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:35:14.662 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:35:14.686 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:35:14.722 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:35:14.836 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:35:14.840 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:35:14.852 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.979 seconds (JVM running for 7.875)
+09:35:24.814 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09:35:31.033 [http-nio-10099-exec-3] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: The temporary upload location [/tmp/tomcat.2845731499425281695.10099/work/Tomcat/localhost/ROOT/temp/file] is not valid] with root cause
+java.io.IOException: The temporary upload location [/tmp/tomcat.2845731499425281695.10099/work/Tomcat/localhost/ROOT/temp/file] is not valid
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2877) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3242) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1136) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:381) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:84) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+09:40:14.496 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:40:51.187 [Thread-19] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582249251187, current=DOWN, previous=UP]
+09:40:51.189 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:40:51.196 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:40:51.225 [Thread-19] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+09:40:51.225 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+09:40:54.227 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+09:40:54.236 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+09:40:54.267 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+09:40:59.212 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:41:00.665 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:41:00.674 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:41:00.674 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:41:00.678 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:41:00.754 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:41:00.890 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:41:01.013 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:41:01.248 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+09:41:01.303 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:41:01.304 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:41:01.339 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:41:01.438 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:41:01.954 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:41:03.007 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:41:03.035 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:41:03.035 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:41:03.039 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:41:03.039 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:41:04.033 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:41:04.203 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:41:04.203 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:41:04.299 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:41:04.299 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:41:04.476 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:41:04.492 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:41:04.492 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:41:04.493 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:41:04.493 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:41:04.493 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:41:04.493 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:41:04.493 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:41:04.633 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:41:04.637 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:41:04.639 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:41:04.642 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582249264641 with initial instances count: 4
+09:41:04.646 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582249264646, current=UP, previous=STARTING]
+09:41:04.648 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:41:04.650 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:41:04.669 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:41:04.682 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:41:04.694 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:41:04.783 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:41:04.787 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:41:04.802 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.867 seconds (JVM running for 7.744)
+09:42:29.598 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09:42:29.631 [http-nio-10099-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: The temporary upload location [/temp/file] is not valid] with root cause
+java.io.IOException: The temporary upload location [/temp/file] is not valid
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2877) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3242) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1136) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:381) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:84) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+09:44:12.051 [Thread-19] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582249452051, current=DOWN, previous=UP]
+09:44:12.052 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:44:12.059 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:44:12.078 [Thread-19] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+09:44:12.079 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+09:44:15.081 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+09:44:15.092 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+09:44:15.124 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+09:44:20.564 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:46:40.621 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:46:40.632 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:46:40.633 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:46:40.638 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:46:40.719 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:46:40.883 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:46:41.008 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:46:41.277 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+09:46:41.366 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:46:41.368 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:46:41.432 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:46:41.626 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:46:42.220 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:46:43.684 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:46:43.716 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:46:43.716 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:46:43.721 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:46:43.721 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:46:44.724 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:46:44.930 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:46:44.930 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:46:45.046 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:46:45.046 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:46:45.312 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:46:45.339 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:46:45.339 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:46:45.339 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:46:45.340 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:46:45.340 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:46:45.340 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:46:45.340 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:46:45.486 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:46:45.489 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:46:45.492 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:46:45.497 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582249605495 with initial instances count: 3
+09:46:45.502 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582249605501, current=UP, previous=STARTING]
+09:46:45.503 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:46:45.506 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:46:45.531 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:46:45.548 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:46:45.569 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:46:45.693 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:46:45.698 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:46:45.714 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 146.396 seconds (JVM running for 147.811)
+09:46:47.174 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09:46:54.969 [http-nio-10099-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: The temporary upload location [/temp/file] is not valid] with root cause
+java.io.IOException: The temporary upload location [/temp/file] is not valid
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2877) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3242) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1136) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:381) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:84) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+09:47:25.732 [Thread-23] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582249645732, current=DOWN, previous=UP]
+09:47:25.733 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:47:25.741 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:47:25.766 [Thread-23] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+09:47:25.768 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+09:47:28.770 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+09:47:28.779 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+09:47:28.811 [Thread-23] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+09:47:33.704 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:47:35.083 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:47:35.091 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:47:35.091 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:47:35.095 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:47:35.182 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:47:35.350 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:47:35.505 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:47:35.742 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+09:47:35.816 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:47:35.817 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:47:35.853 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:47:35.960 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:47:36.508 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:47:37.665 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:47:37.691 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:47:37.691 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:47:37.694 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:47:37.695 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:47:38.854 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:47:38.996 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:47:38.997 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:47:39.088 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:47:39.088 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:47:39.313 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:47:39.330 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:47:39.331 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:47:39.331 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:47:39.331 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:47:39.331 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:47:39.331 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:47:39.331 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:47:39.439 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:47:39.442 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:47:39.445 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:47:39.448 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582249659447 with initial instances count: 4
+09:47:39.452 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582249659452, current=UP, previous=STARTING]
+09:47:39.454 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:47:39.456 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:47:39.473 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:47:39.496 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:47:39.499 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:47:39.592 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:47:39.595 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:47:39.664 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 7.223 seconds (JVM running for 8.15)
+09:52:39.332 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:54:31.448 [Thread-19] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250071447, current=DOWN, previous=UP]
+09:54:31.448 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:54:31.456 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:54:31.490 [Thread-19] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+09:54:31.490 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+09:54:34.492 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+09:54:34.500 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+09:54:34.543 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+09:54:40.146 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:54:41.576 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:54:41.584 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:54:41.584 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:54:41.589 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:54:41.754 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:54:41.873 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:54:41.984 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:54:42.218 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+09:54:42.273 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:54:42.275 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:54:42.310 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:54:42.406 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:54:42.937 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:54:44.156 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:54:44.182 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:54:44.182 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:54:44.186 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:54:44.186 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:54:45.211 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:54:45.369 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:54:45.369 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:54:45.469 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:54:45.469 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:54:45.660 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:54:45.677 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:54:45.678 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:54:45.678 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:54:45.678 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:54:45.678 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:54:45.678 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:54:45.678 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:54:45.800 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:54:45.802 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:54:45.805 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:54:45.809 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582250085808 with initial instances count: 4
+09:54:45.813 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250085813, current=UP, previous=STARTING]
+09:54:45.814 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:54:45.817 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:54:45.835 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:54:45.861 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:54:45.865 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:54:45.955 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:54:45.959 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:54:45.977 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 7.35 seconds (JVM running for 8.329)
+09:56:20.226 [Thread-20] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250180226, current=DOWN, previous=UP]
+09:56:20.227 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:56:20.234 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:56:20.247 [Thread-20] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+09:56:20.248 [Thread-20] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+09:56:23.250 [Thread-20] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+09:56:23.256 [Thread-20] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+09:56:23.272 [Thread-20] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+09:56:27.859 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:56:29.307 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:56:29.315 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:56:29.315 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:56:29.319 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:56:29.389 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:56:29.516 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:56:29.637 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:56:29.856 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+09:56:29.918 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:56:29.920 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:56:29.958 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:56:30.077 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:56:30.582 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:56:31.638 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:56:31.665 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:56:31.665 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:56:31.669 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:56:31.669 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:56:32.646 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:56:32.808 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:56:32.808 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:56:32.909 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:56:32.909 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:56:33.190 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:56:33.212 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:56:33.212 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:56:33.213 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:56:33.213 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:56:33.213 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:56:33.213 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:56:33.213 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:56:33.343 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:56:33.346 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:56:33.349 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:56:33.354 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582250193353 with initial instances count: 4
+09:56:33.358 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250193358, current=UP, previous=STARTING]
+09:56:33.359 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:56:33.367 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:56:33.385 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:56:33.402 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:56:33.413 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:56:33.524 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:56:33.528 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:56:33.540 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.969 seconds (JVM running for 7.874)
+09:57:03.857 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09:57:09.361 [http-nio-10099-exec-2] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: The temporary upload location [/temp/file] is not valid] with root cause
+java.io.IOException: The temporary upload location [/temp/file] is not valid
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2877) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3242) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1136) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:381) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:84) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+09:57:45.658 [Thread-19] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250265658, current=DOWN, previous=UP]
+09:57:45.659 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:57:45.668 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:57:45.683 [Thread-19] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+09:57:45.683 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+09:57:48.685 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+09:57:48.693 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+09:57:48.718 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+09:57:53.653 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+09:57:55.079 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+09:57:55.087 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+09:57:55.088 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+09:57:55.092 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+09:57:55.160 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+09:57:55.290 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+09:57:55.399 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+09:57:55.631 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+09:57:55.689 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+09:57:55.690 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+09:57:55.725 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+09:57:55.838 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+09:57:56.336 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+09:57:57.369 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+09:57:57.396 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:57:57.396 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:57:57.400 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+09:57:57.400 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:57:58.352 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+09:57:58.490 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+09:57:58.491 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+09:57:58.587 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+09:57:58.587 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+09:57:58.770 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+09:57:58.788 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+09:57:58.788 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+09:57:58.788 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+09:57:58.788 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+09:57:58.789 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+09:57:58.789 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+09:57:58.789 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+09:57:58.903 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+09:57:58.906 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+09:57:58.908 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:57:58.911 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582250278910 with initial instances count: 4
+09:57:58.915 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250278915, current=UP, previous=STARTING]
+09:57:58.916 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+09:57:58.919 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+09:57:58.936 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+09:57:58.949 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+09:57:58.961 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+09:57:59.047 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+09:57:59.051 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+09:57:59.063 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.674 seconds (JVM running for 7.593)
+09:58:19.384 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+10:02:58.791 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:05:06.016 [Thread-19] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250706016, current=DOWN, previous=UP]
+10:05:06.018 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+10:05:06.025 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+10:05:06.041 [Thread-19] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+10:05:06.041 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+10:05:09.045 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+10:05:09.054 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+10:05:09.085 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+10:05:16.165 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+10:05:17.602 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+10:05:17.610 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+10:05:17.610 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+10:05:17.614 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+10:05:17.683 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+10:05:17.800 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+10:05:17.913 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+10:05:18.125 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+10:05:18.184 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+10:05:18.186 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+10:05:18.224 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+10:05:18.335 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+10:05:18.811 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+10:05:19.855 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+10:05:19.882 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+10:05:19.882 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:05:19.885 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+10:05:19.886 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:05:20.934 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+10:05:21.082 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+10:05:21.082 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+10:05:21.179 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+10:05:21.179 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+10:05:21.367 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:05:21.386 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+10:05:21.386 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+10:05:21.386 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+10:05:21.386 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+10:05:21.386 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+10:05:21.386 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+10:05:21.387 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+10:05:21.501 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+10:05:21.504 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+10:05:21.506 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+10:05:21.509 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582250721508 with initial instances count: 3
+10:05:21.514 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250721514, current=UP, previous=STARTING]
+10:05:21.523 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+10:05:21.526 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+10:05:21.544 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+10:05:21.561 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+10:05:21.572 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+10:05:21.676 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+10:05:21.680 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+10:05:21.693 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.977 seconds (JVM running for 7.879)
+10:05:33.451 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+10:07:07.608 [Thread-19] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250827608, current=DOWN, previous=UP]
+10:07:07.612 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+10:07:07.622 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+10:07:07.657 [Thread-19] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+10:07:07.658 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+10:07:10.659 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+10:07:10.664 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+10:07:10.670 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+10:07:16.285 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+10:07:17.672 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+10:07:17.679 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+10:07:17.680 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+10:07:17.683 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+10:07:17.751 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+10:07:17.871 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+10:07:17.984 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+10:07:18.205 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+10:07:18.267 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+10:07:18.268 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+10:07:18.308 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+10:07:18.420 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+10:07:18.888 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+10:07:19.916 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+10:07:19.942 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+10:07:19.943 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:07:19.946 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+10:07:19.947 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:07:20.904 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+10:07:21.051 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+10:07:21.052 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+10:07:21.147 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+10:07:21.147 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+10:07:21.336 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:07:21.354 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+10:07:21.354 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+10:07:21.354 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+10:07:21.355 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+10:07:21.355 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+10:07:21.355 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+10:07:21.355 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+10:07:21.486 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+10:07:21.488 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+10:07:21.490 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+10:07:21.494 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582250841493 with initial instances count: 3
+10:07:21.498 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250841498, current=UP, previous=STARTING]
+10:07:21.499 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+10:07:21.502 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+10:07:21.520 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+10:07:21.531 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+10:07:21.544 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+10:07:21.642 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+10:07:21.646 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+10:07:21.657 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.716 seconds (JVM running for 7.636)
+10:08:19.549 [Thread-19] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250899549, current=DOWN, previous=UP]
+10:08:19.549 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+10:08:19.558 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+10:08:19.573 [Thread-19] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+10:08:19.574 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+10:08:22.575 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+10:08:22.578 [DiscoveryClient-0] WARN  com.netflix.discovery.TimedSupervisorTask  - task supervisor shutting down, can't accept the task
+10:08:22.585 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+10:08:22.614 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+10:08:26.784 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - No active profile set, falling back to default profiles: default
+10:08:28.198 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-10099"]
+10:08:28.206 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+10:08:28.206 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/8.5.34
+10:08:28.210 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+10:08:28.281 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+10:08:28.399 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  - Init DruidDataSource
+10:08:28.513 [main] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} inited
+10:08:28.726 [main] INFO  org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+10:08:28.778 [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {5.2.17.Final}
+10:08:28.779 [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+10:08:28.814 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+10:08:28.927 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+10:08:29.399 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+10:08:30.474 [main] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping  - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+10:08:30.500 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+10:08:30.500 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:08:30.504 [main] WARN  com.netflix.config.sources.URLConfigurationSource  - No URLs will be polled as dynamic configuration sources.
+10:08:30.504 [main] INFO  com.netflix.config.sources.URLConfigurationSource  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:08:31.451 [main] INFO  com.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+10:08:31.597 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON encoding codec LegacyJacksonJson
+10:08:31.597 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using JSON decoding codec LegacyJacksonJson
+10:08:31.694 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML encoding codec XStreamXml
+10:08:31.694 [main] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider  - Using XML decoding codec XStreamXml
+10:08:31.865 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:08:31.881 [main] INFO  com.netflix.discovery.DiscoveryClient  - Disable delta property : false
+10:08:31.881 [main] INFO  com.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+10:08:31.881 [main] INFO  com.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+10:08:31.881 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application is null : false
+10:08:31.882 [main] INFO  com.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+10:08:31.882 [main] INFO  com.netflix.discovery.DiscoveryClient  - Application version is -1: true
+10:08:31.882 [main] INFO  com.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+10:08:31.995 [main] INFO  com.netflix.discovery.DiscoveryClient  - The response status is 200
+10:08:31.998 [main] INFO  com.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+10:08:32.000 [main] INFO  com.netflix.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+10:08:32.003 [main] INFO  com.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1582250912002 with initial instances count: 4
+10:08:32.007 [main] INFO  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582250912007, current=UP, previous=STARTING]
+10:08:32.008 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+10:08:32.011 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Context refreshed
+10:08:32.026 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper  - Found 1 custom documentation plugin(s)
+10:08:32.037 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+10:08:32.047 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner  - Scanning for api listing references
+10:08:32.150 [main] INFO  org.apache.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-10099"]
+10:08:32.154 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool  - Using a shared selector for servlet write/read
+10:08:32.168 [main] INFO  com.bison.inventory.BisonSzLocalInventoryTempApplication  - Started BisonSzLocalInventoryTempApplication in 6.557 seconds (JVM running for 7.489)
+10:08:46.409 [http-nio-10099-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring FrameworkServlet 'dispatcherServlet'
+10:13:31.884 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:18:31.885 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:23:31.886 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+10:28:09.179 [Thread-19] WARN  com.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1582252089179, current=DOWN, previous=UP]
+10:28:09.180 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory: registering service...
+10:28:09.189 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - registration status: 204
+10:28:09.211 [Thread-19] INFO  com.alibaba.druid.pool.DruidDataSource  - {dataSource-1} closed
+10:28:09.211 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+10:28:12.213 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Unregistering ...
+10:28:12.221 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - DiscoveryClient_SZ-LOCAL-INVENTORY/sz-local-inventory - deregister  status: 200
+10:28:12.252 [Thread-19] INFO  com.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient

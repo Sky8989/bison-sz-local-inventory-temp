@@ -1,6 +1,7 @@
 package com.bison.inventory.util.excel;
 
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -309,6 +310,38 @@ public class ImportExcelUtil {
         }
     }
 
+    /**
+     * 指定页数
+     * @param filename
+     * @param pageSize
+     * @throws Exception
+     */
+    public void processSheetsByPageSize(String filename, int pageSize) throws Exception {
+
+        OPCPackage pkg =null;
+        InputStream sheet2=null;
+
+        try{
+            pkg=OPCPackage.open(filename);
+            XSSFReader r = new XSSFReader( pkg );
+            SharedStringsTable sst = r.getSharedStringsTable();
+            XMLReader parser = fetchSheetParser(sst);
+            sheet2 = r.getSheet("rId"+pageSize);
+            InputSource sheetSource = new InputSource(sheet2);
+            parser.parse(sheetSource);
+            setRowContents(sheetHandler.getRowContents());
+        }catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }finally{
+            if(pkg!=null){
+                pkg.close();
+            }
+            if(sheet2!=null){
+                sheet2.close();
+            }
+        }
+    }
 
 
     //测试

@@ -156,6 +156,62 @@
         out_bound_quantity = values(out_bound_quantity)
 
     </insert>
+    <insert id="batchInsert" parameterType="com.bison.inventory.pojo.ShenZhenLocalOutInBoundInventroy">
+
+        INSERT INTO `bison_amz_product_inventory`.`sz_local_out_in_bound_inventroy`
+        (
+                auto_id,
+                transaction_type,
+                out_in_bound_date,
+                out_in_bound_type_id,
+                certificate_type_id,
+                sku,
+                receipt_date,
+                delivery_note_number,
+                send_check_number,
+                certificate_number,
+                product_id,
+                supplier_abbreviation,
+                inventory_type,
+                in_bound_quantity,
+                out_bound_quantity,
+                move_in_bound_quantity,
+                move_out_bound_quantity,
+                remarks)
+                values
+            <foreach collection="inventoryList" item="inventory"  separator=",">
+                ( #{inventory.autoId,jdbcType=INTEGER},
+                    #{inventory.transactionType,jdbcType=INTEGER},
+                    #{inventory.outInBoundDate},
+                    #{inventory.outInBoundTypeId,jdbcType=INTEGER},
+                    #{inventory.certificateTypeId,jdbcType=INTEGER},
+                    #{inventory.sku},
+                    #{inventory.receiptDate},
+                    #{inventory.deliveryNoteNumber},
+                    #{inventory.sendCheckNumber},
+                    #{inventory.certificateNumber},
+                    #{inventory.productId},
+                    #{inventory.supplierAbbreviation},
+                    #{inventory.inventoryType},
+                    #{inventory.inBoundQuantity},
+                    #{inventory.outBoundQuantity},
+                    #{inventory.moveInBoundQuantity},
+                    #{inventory.moveOutBoundQuantity},
+                    #{inventory.remarks})
+        </foreach>
+
+        ON DUPLICATE KEY UPDATE
+        product_id=VALUES(product_id),
+        sku=VALUES(sku),
+        inventory_type=VALUES(inventory_type),
+        supplier_abbreviation=VALUES(supplier_abbreviation),
+        out_in_bound_date=VALUES(out_in_bound_date),
+        in_bound_quantity = values(in_bound_quantity),
+        move_in_bound_quantity = values(move_in_bound_quantity),
+        move_out_bound_quantity = values(move_out_bound_quantity),
+        out_bound_quantity = values(out_bound_quantity)
+
+    </insert>
     <select id="findShenZhenLocalINventoryTempList"
             resultType="com.bison.inventory.pojo.AmzShenZhenLocalInventroyTemp">
 
